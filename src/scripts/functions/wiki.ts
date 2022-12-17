@@ -39,6 +39,18 @@ window.setInterval(() => {
         titleRead.innerHTML = wikisTitle[10];
         read_1.innerHTML = `${wikisText_1[10]}`
         read_2.innerHTML = `${wikisText_1[10.1]}`
+    } else if (paramsWiki == 'Youtube' || paramsWiki == 'youtube' || paramsWiki == 'YouTube') {
+        titleRead.innerHTML = wikisTitle[11];
+        read_1.innerHTML = `${wikisText_1[11]}`
+        read_2.innerHTML = `${wikisText_1[11.1]}`
+    } else if (paramsWiki == 'Facebook' || paramsWiki == 'facebook' || paramsWiki == 'FaceBook') {
+        titleRead.innerHTML = wikisTitle[12];
+        read_1.innerHTML = `${wikisText_1[12]}`
+        read_2.innerHTML = `${wikisText_1[12.1]}`
+    } else if (paramsWiki == 'Instagram' || paramsWiki == 'instagram' || paramsWiki == 'InstaGram') {
+        titleRead.innerHTML = wikisTitle[13];
+        read_1.innerHTML = `${wikisText_1[13]}`
+        read_2.innerHTML = `${wikisText_1[13.1]}`
     } else {
         titleRead.innerHTML = 'ERROR 404';
         read_1.innerHTML = "This article was not found";
