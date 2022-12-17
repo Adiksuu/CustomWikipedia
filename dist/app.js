@@ -32,7 +32,7 @@ function toggleMenu() {
 function toggleMode() {
     myElement.classList.toggle("dark");
 }
-function loadContent() {
+window.setInterval(() => {
     if (paramsWiki == 'wikipedia' || paramsWiki == 'wiki' || paramsWiki == 'Wikipedia' || paramsWiki == 'Wiki') {
         titleRead.innerHTML = wikisTitle[1];
         read_1.innerHTML = `${wikisText_1[1]} <span>${wikisText_1[1.1]}</span> ${wikisText_1[1.2]} <span>${wikisText_1[1.3]}</span>`;
@@ -89,7 +89,7 @@ function loadContent() {
         read_2.innerHTML = " Try searching for another article, if that doesn't work try refreshing the page, reconnecting to WIFI, if you have any problems try contacting us!";
     }
     document.title = `Wikipedia - ${paramsWiki}`;
-}
+}, 20);
 const myElement = document.querySelector("body");
 const toggler = document.querySelector("#bell");
 const leftside = document.querySelector(".leftside");
