@@ -1,0 +1,11 @@
+{
+  "name": "wikipedia",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/scripts/app.js",
+  "scripts": {
+    "compile": "tsc --watch"
+  },
+  "author": "Adiksuu",
+  "license": "ISC"
+}

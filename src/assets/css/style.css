@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    outline: none;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    transition: .3s linear;
+}
+:root {
+    --white: #fff;
+    --dark-white: #dddddd;
+    --gray: #a7a7a7;
+    --black: #0f0f0f;
+    --blue: #00a0c5;
+}
+body {
+    background: var(--dark-white);
+}
+body.dark {
+    --white: #0f0f0f;
+    --dark-white: #252525;
+    --gray: #a7a7a7;
+    --black: #fff;
+    --blue: #00a0c5;
+}
+.home {
+    height: auto;
+}
+.leftside {
+    background: var(--white);
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 256px;
+}
+.topside {
+    position: fixed;
+    width: calc(100% - 256px);
+    height: 96px;
+    right: 0;
+    z-index: 1;
+    background: var(--dark-white);
+}
+.wikipedia {
+    width: calc(100% - 256px);
+    height: calc(100% - 96px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+/* TOPSIDE */
+.topside .content {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top: 24px;
+    height: 48px;
+    left: 24px;
+}
+.topside .content button{
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: var(--blue);
+    color: var(--white);
+    font-size: 18px;
+    position: relative;
+    left: 4px;
+    cursor: pointer;
+}
+.topside .content input {
+    width: 80%;
+    height: 44px;
+    border-radius: 0 8px 8px 0;
+    padding: 3px 12px;
+    background: var(--white);
+}
+.topside .content input, .topside .content input::placeholder {
+    color: var(--gray);
+}
+.topside .content i#bell ,.topside .content i#menu_open {
+    position: relative;
+    left: 16px;
+    font-size: 22px;
+    cursor: pointer;
+    color: var(--black);
+}
+i#menu_open {
+    display: none;
+}
+
+/* LEFTSIDE */
+.leftside .content .title {
+    width: 100%;
+    height: 96px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    position: relative;
+}
+.leftside .content .title img {
+    height: 48px;
+    width: 48px;
+    border-radius: 9999px;
+    position: relative;
+    left: 12px;
+}
+.leftside .content .title h1 {
+    color: var(--black);
+    font-size: 22px;
+    font-weight: 600;
+}
+.leftside .pages {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    position: relative;
+    top: 0px;
+    left: 16px;
+    width: calc(100% - 32px);
+    gap: 12px;
+    padding: 24px 0;
+    border-bottom: 2px solid #b1b1b1;
+}
+.leftside .pages p, .leftside .pages a {
+    cursor: pointer;
+    color: var(--black);
+    text-decoration: none;
+}
+.leftside .pages#toggle_mode {
+    display: none;
+}
+
+/* WIKIPEDIA */
+.wikipedia .content {
+    position: relative;
+    margin-left: 24px;
+    top: 0;
+}
+.wikipedia .content h1 {
+    font-weight: 600;
+    color: #727272;
+}
+.wikipedia .content h1 span {
+    color: var(--black);
+}
+.wikipedia .content h1.today_articles {
+    margin-top: 48px;
+    margin-bottom: 12px;
+    width: calc(50% - 16px);
+}
+.wikipedia_boxes {
+    height: 256px;
+    width: calc(100% - 24px);
+    position: relative;
+    top: 14px;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+.wikipedia_boxes .wikipedia_box {
+    background: var(--white);
+    height: 100%;
+    width: 50%;
+    border-radius: 8px;
+}
+.wikipedia_box#box_1 {
+    background: url(../images/wall_2.png);
+    background-position: center;
+    background-size: cover;
+}
+.wikipedia_box#box_2 {
+    background: url(../images/wall_1.png);
+    background-position: center;
+    background-size: cover;
+}
+.wikipedia_boxes .wikipedia_box.today_articles {
+    margin-bottom: 24px;
+}
+.wikipedia_news {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    top: -10px;
+    justify-content: center;
+}
+.wikipedia_new {
+    background: var(--white);
+    width: 100%;
+    height: 72px;
+    border-radius: 8px;
+}
+.article_names {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+.box_info {
+    width: calc(100% - 16px);
+    height: 128px;
+    position: relative;
+    top: calc(100% - 128px);
+    margin-left: 16px;
+}
+.read_more {
+    position: relative;
+    float: right;
+    right: 16px;
+    cursor: pointer;
+}
+.read_more i {
+    margin-left: 8px;
+}
+.wikipedia .content .box_info h1 {
+    font-weight: 400;
+    color: #d6d6d6;
+}
+.wikipedia .content .box_info h1 span {
+    color: var(--white);
+    font-weight: 500;
+}
+.wikipedia .content .box_info p, .wikipedia .content .box_info a {
+    color: #fff;
+    font-weight: 400;
+    text-decoration: none;
+}
+.wikipedia_new p {
+    position: relative;
+    top: 10px;
+    left: 10px;
+    width: calc(100% - 10px);
+    font-weight: 500;
+    color: var(--black);
+}
+.wikipedia_new p span, .wikipedia_new p span a {
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+.wikipedia .content .read {
+    margin-top: 16px;
+    width: calc(100% - 16px);
+}
+.wikipedia .content .read p {
+    color: var(--black);
+    font-weight: 500;
+}
+.wikipedia .content .read p span {
+    color: var(--blue);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 5px;
+	/* box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25); */
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+	background-color: var(--blue);
+}
+
+/* MEDIA */
+@media screen and (max-width: 1038px) {
+    .leftside {
+        width: 198px;
+    }
+    .topside, .wikipedia {
+        width: calc(100% - 198px);
+    }
+    .topside .content input {
+        width: 70%;
+    }
+    .wikipedia_boxes .wikipedia_box {
+        width: 100%;
+    }
+    .wikipedia_boxes {
+        flex-direction: column;
+        height: 500px;
+    }
+    .wikipedia_news {
+        display: none;
+    }
+    .wikipedia_boxes#today_articles {
+        height: 262px;
+    }
+    .wikipedia .content h1.today_articles:nth-child(1) {
+        width: 100%;
+    }
+    h1.today_articles:nth-child(2) {
+        display: none;
+    }
+    .box_info {
+        top: calc(100% - 156px);
+    }
+}
+@media screen and (max-width: 724px) {
+    .leftside {
+        width: 100%;
+        z-index: 1;
+        display: none;
+    }
+    .topside, .wikipedia {
+        width: 100%;
+    }
+    .topside .content i#bell {
+        display: none;
+    }
+    .topside .content input {
+        width: 60%;
+    }
+    i#menu_open {
+        display: block;
+    }
+    .leftside.show {
+        display: block;
+    }
+    .leftside .content .title {
+        opacity: 0;
+        position: none;
+    }
+    .leftside .content .pages#toggle_mode {
+        display: block;
+    }
+    .leftside .content .pages#toggle_mode i {
+        cursor: pointer;
+        color: var(--black);
+    }
+}
