@@ -54,6 +54,22 @@ window.setInterval(() => {
         titleRead.innerHTML = wikisTitle[13];
         read_1.innerHTML = `${wikisText_1[13]}`
         read_2.innerHTML = `${wikisText_1[13.1]}`
+    } else if (paramsWiki == 'Messenger' || paramsWiki == 'messenger') {
+        titleRead.innerHTML = wikisTitle[14];
+        read_1.innerHTML = `${wikisText_1[14]}`
+        read_2.innerHTML = `${wikisText_1[14.1]}`
+    } else if (paramsWiki == 'Snapchat' || paramsWiki == 'snapchat') {
+        titleRead.innerHTML = wikisTitle[15];
+        read_1.innerHTML = `${wikisText_1[15]}`
+        read_2.innerHTML = `${wikisText_1[15.1]}`
+    } else if (paramsWiki == 'Discord' || paramsWiki == 'discord') {
+        titleRead.innerHTML = wikisTitle[16];
+        read_1.innerHTML = `${wikisText_1[16]}`
+        read_2.innerHTML = `${wikisText_1[16.1]}`
+    } else if (paramsWiki == 'Tiktok' || paramsWiki == 'TikTok' || paramsWiki == 'tiktok') {
+        titleRead.innerHTML = wikisTitle[17];
+        read_1.innerHTML = `${wikisText_1[17]}`
+        read_2.innerHTML = `${wikisText_1[17.1]} <br><br><br><br><br><br><br><br><br> YouTube Shorts > TikTok`;
     } else {
         titleRead.innerHTML = 'ERROR 404';
         read_1.innerHTML = "This article was not found";
