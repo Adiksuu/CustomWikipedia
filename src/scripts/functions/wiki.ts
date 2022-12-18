@@ -1,4 +1,7 @@
 window.setInterval(() => {
+
+    setTitle();
+
     if (paramsWiki == 'wikipedia' || paramsWiki == 'wiki' || paramsWiki == 'Wikipedia' || paramsWiki == 'Wiki') {
         titleRead.innerHTML = wikisTitle[1];
         read_1.innerHTML = `${wikisText_1[1]} <span>${wikisText_1[1.1]}</span> ${wikisText_1[1.2]} <span>${wikisText_1[1.3]}</span>`
@@ -56,6 +59,12 @@ window.setInterval(() => {
         read_1.innerHTML = "This article was not found";
         read_2.innerHTML = " Try searching for another article, if that doesn't work try refreshing the page, reconnecting to WIFI, if you have any problems try contacting us!";
     }
-    document.title = `Wikipedia - ${paramsWiki}`;
 }, 20)
 
+function setTitle() {
+    if (paramsWiki != null) {
+        document.title = `Wikipedia - ${paramsWiki}`;
+    } else if (paramsWiki == null) {
+        document.title = `Wikipedia`;
+    }
+}

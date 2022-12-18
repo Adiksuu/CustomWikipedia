@@ -17,6 +17,9 @@ function searchArticleConfirm() {
     if (setParams != '') {
         window.location.search = `?wiki=${setParams}`;
     }
+    else if (setParams == '') {
+        window.location.search = '';
+    }
 }
 window.addEventListener("keydown", (e) => {
     if (e.code === "Enter") {
@@ -25,7 +28,65 @@ window.addEventListener("keydown", (e) => {
 });
 window.setInterval(() => {
     setParams = searchArticle.value;
+    if (paramsWiki != null) {
+        contentSearched.classList.add('show');
+        contentHome.classList.add('hide');
+    }
+    else if (paramsWiki == null) {
+        contentSearched.classList.remove('show');
+        contentHome.classList.remove("hide");
+    }
 }, 10);
+function showCategories() {
+    if (categoriesArrow_1.classList.contains("fa-chevron-down")) {
+        categories.classList.add("show");
+        categoriesArrow_1.classList.replace('fa-chevron-down', 'fa-chevron-right');
+    }
+    else if (categoriesArrow_1.classList.contains("fa-chevron-right")) {
+        categories.classList.remove("show");
+        categoriesArrow_1.classList.replace('fa-chevron-right', 'fa-chevron-down');
+    }
+}
+function showCategories_2() {
+    if (categoriesArrow_2.classList.contains("fa-chevron-down")) {
+        categories_2.classList.add("show");
+        categoriesArrow_2.classList.replace("fa-chevron-down", "fa-chevron-right");
+    }
+    else if (categoriesArrow_2.classList.contains("fa-chevron-right")) {
+        categories_2.classList.remove("show");
+        categoriesArrow_2.classList.replace("fa-chevron-right", "fa-chevron-down");
+    }
+}
+function showCategories_3() {
+    if (categoriesArrow_3.classList.contains("fa-chevron-down")) {
+        categories_3.classList.add("show");
+        categoriesArrow_3.classList.replace("fa-chevron-down", "fa-chevron-right");
+    }
+    else if (categoriesArrow_3.classList.contains("fa-chevron-right")) {
+        categories_3.classList.remove("show");
+        categoriesArrow_3.classList.replace("fa-chevron-right", "fa-chevron-down");
+    }
+}
+function showCategories_4() {
+    if (categoriesArrow_4.classList.contains("fa-chevron-down")) {
+        categories_4.classList.add("show");
+        categoriesArrow_4.classList.replace("fa-chevron-down", "fa-chevron-right");
+    }
+    else if (categoriesArrow_4.classList.contains("fa-chevron-right")) {
+        categories_4.classList.remove("show");
+        categoriesArrow_4.classList.replace("fa-chevron-right", "fa-chevron-down");
+    }
+}
+function showCategories_5() {
+    if (categoriesArrow_5.classList.contains("fa-chevron-down")) {
+        categories_5.classList.add("show");
+        categoriesArrow_5.classList.replace("fa-chevron-down", "fa-chevron-right");
+    }
+    else if (categoriesArrow_5.classList.contains("fa-chevron-right")) {
+        categories_5.classList.remove("show");
+        categoriesArrow_5.classList.replace("fa-chevron-right", "fa-chevron-down");
+    }
+}
 function toggleMenu() {
     leftside.classList.toggle("show");
 }
@@ -33,6 +94,7 @@ function toggleMode() {
     myElement.classList.toggle("dark");
 }
 window.setInterval(() => {
+    setTitle();
     if (paramsWiki == 'wikipedia' || paramsWiki == 'wiki' || paramsWiki == 'Wikipedia' || paramsWiki == 'Wiki') {
         titleRead.innerHTML = wikisTitle[1];
         read_1.innerHTML = `${wikisText_1[1]} <span>${wikisText_1[1.1]}</span> ${wikisText_1[1.2]} <span>${wikisText_1[1.3]}</span>`;
@@ -103,8 +165,15 @@ window.setInterval(() => {
         read_1.innerHTML = "This article was not found";
         read_2.innerHTML = " Try searching for another article, if that doesn't work try refreshing the page, reconnecting to WIFI, if you have any problems try contacting us!";
     }
-    document.title = `Wikipedia - ${paramsWiki}`;
 }, 20);
+function setTitle() {
+    if (paramsWiki != null) {
+        document.title = `Wikipedia - ${paramsWiki}`;
+    }
+    else if (paramsWiki == null) {
+        document.title = `Wikipedia`;
+    }
+}
 const myElement = document.querySelector("body");
 const toggler = document.querySelector("#bell");
 const leftside = document.querySelector(".leftside");
@@ -112,6 +181,18 @@ const titleRead = document.querySelector("#title-read");
 const read_1 = document.querySelector(".read_1");
 const read_2 = document.querySelector(".read_2");
 const searchArticle = document.querySelector('#searchArticle');
+const categories = document.querySelector(".categories");
+const categories_2 = document.querySelector(".categories_2");
+const categories_3 = document.querySelector(".categories_3");
+const categories_4 = document.querySelector(".categories_4");
+const categories_5 = document.querySelector(".categories_5");
+const categoriesArrow_1 = document.querySelector("#categoriesArrow_1");
+const categoriesArrow_2 = document.querySelector("#categoriesArrow_2");
+const categoriesArrow_3 = document.querySelector("#categoriesArrow_3");
+const categoriesArrow_4 = document.querySelector("#categoriesArrow_4");
+const categoriesArrow_5 = document.querySelector("#categoriesArrow_5");
+const contentSearched = document.querySelector("#contentSearched");
+const contentHome = document.querySelector("#contentHome");
 let wikisTitle = {
     1: "Wikipedia",
     2: "Winter",

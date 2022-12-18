@@ -19,10 +19,36 @@
                     <h1>Wikipedia</h1>
                 </div>
                 <div class="pages">
-                    <p><a href="#">Main page</a></p>
-                    <p><a href="./wikis/wiki.html?wiki=instagram">Latest article</a></p>
+                    <p><a href="./index.html">Main page</a></p>
+                    <p><a href="./index.html?wiki=instagram">Latest article</a></p>
                     <p>Donate to Wikipedia</p>
-                    <p>Articles</p>
+                    <p onclick="showCategories();">Articles <i class="fas fa-chevron-down" id="categoriesArrow_1"></i></p>
+                    <div class="categories">
+                        <p onclick="showCategories_2();">Apps <i class="fas fa-chevron-down" id="categoriesArrow_2"></i></p>
+                        <div class="categories_2">
+                            <a href="./index.html?wiki=youtube"><p>YouTube</p></a>
+                            <a href="./index.html?wiki=facebook"><p>Facebook</p></a>
+                            <a href="./index.html?wiki=instagram"><p>Instagram</p></a>
+                        </div>
+                        <p onclick="showCategories_3();">Programming <i class="fas fa-chevron-down" id="categoriesArrow_3"></i></p>
+                        <div class="categories_3">
+                            <a href="./index.html?wiki=HTML"><p>HTML</p></a>
+                            <a href="./index.html?wiki=CSS"><p>CSS</p></a>
+                            <a href="./index.html?wiki=javascript"><p>Javascript</p></a>
+                            <a href="./index.html?wiki=python"><p>Python</p></a>
+                        </div>
+                        <p onclick="showCategories_4();">Seasons <i class="fas fa-chevron-down" id="categoriesArrow_4"></i></p>
+                        <div class="categories_4">
+                            <a href="./index.html?wiki=spring"><p>Spring</p></a>
+                            <a href="./index.html?wiki=summer"><p>Summer</p></a>
+                            <a href="./index.html?wiki=autumn"><p>Autumn</p></a>
+                            <a href="./index.html?wiki=winter"><p>Winter</p></a>
+                        </div>
+                        <p onclick="showCategories_5();">Sports <i class="fas fa-chevron-down" id="categoriesArrow_5"></i></p>
+                        <div class="categories_5">
+                            <a href="./index.html?wiki=worldcup"><p>WorldCup</p></a>
+                        </div>
+                    </div>
                     <p>Docs</p>
                 </div>
                 <div class="pages">
@@ -38,14 +64,19 @@
         </div>
         <div class="topside">
             <div class="content">
-                <button><i class="fas fa-search"></i></button>
-                <input type="text" placeholder="Search Anything...">
+                <button onclick="searchArticleConfirm();"><i class="fas fa-search"></i></button>
+                <input type="text" autocomplete="off" placeholder="Search Anything..." id="searchArticle">
                 <i class="fas fa-moon" id="bell" onclick="toggleMode();"></i>
                 <i class="fas fa-bars" id="menu_open" onclick="toggleMenu();"></i>
             </div>
         </div>
         <div class="wikipedia">
-            <div class="content">
+            <div class="content" id="contentSearched">
+                <h1>Read about <span id="title-read">...</span></h1>
+                <div class="read"><p class="read_1">...</p></div>
+                <div class="read"><p class="read_2">...</p></div>
+            </div>
+            <div class="content" id="contentHome">
                 <h1>Featured <span>articles</span></h1>
                 <div class="wikipedia_boxes">
                     <div class="wikipedia_box" id="box_1">

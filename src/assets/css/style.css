@@ -37,6 +37,10 @@ body.dark {
     top: 0;
     height: 100vh;
     width: 256px;
+    overflow-y: auto;
+}
+.leftside::-webkit-scrollbar {
+    display: none;
 }
 .topside {
     position: fixed;
@@ -138,8 +142,24 @@ i#menu_open {
     color: var(--black);
     text-decoration: none;
 }
+.leftside .pages p:hover, .leftside .pages a:hover {
+    color: var(--blue);
+}
 .leftside .pages#toggle_mode {
     display: none;
+}
+.leftside .pages .categories {
+    position: relative;
+    left: 8px;
+    display: none;
+}
+.categories_2, .categories_3, .categories_4, .categories_5 {
+    position: relative;
+    left: 8px;
+    display: none;
+}
+.leftside .pages .categories.show, .categories_2.show, .categories_3.show, .categories_4.show, .categories_5.show {
+    display: block;
 }
 
 /* WIKIPEDIA */
@@ -265,7 +285,18 @@ i#menu_open {
     font-weight: 600;
     cursor: pointer;
 }
-
+#contentSearched {
+    display: none;
+}
+#contentSearched.show {
+    display: block;
+}
+#contentHome {
+    display: block;
+}
+#contentHome.hide {
+    display: none;
+}
 /* SCROLLBAR */
 ::-webkit-scrollbar {
 	width: 10px;

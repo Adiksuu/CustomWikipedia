@@ -6,6 +6,8 @@ window.setTimeout(() => {
 function searchArticleConfirm() {
     if (setParams != '') {
         window.location.search = `?wiki=${setParams}`;
+    } else if (setParams == '') {
+        window.location.search = '';
     }
 }
 
@@ -17,4 +19,12 @@ window.addEventListener("keydown", (e) => {
 
 window.setInterval(() => {
     setParams = searchArticle.value;
+
+    if (paramsWiki != null) {
+        contentSearched.classList.add('show');
+        contentHome.classList.add('hide');
+    } else if (paramsWiki == null) {
+        contentSearched.classList.remove('show');
+        contentHome.classList.remove("hide");
+    }
 }, 10)
