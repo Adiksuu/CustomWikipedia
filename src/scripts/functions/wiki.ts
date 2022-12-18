@@ -70,6 +70,26 @@ window.setInterval(() => {
         titleRead.innerHTML = wikisTitle[17];
         read_1.innerHTML = `${wikisText_1[17]}`
         read_2.innerHTML = `${wikisText_1[17.1]} <br><br><br><br><br><br><br><br><br> YouTube Shorts > TikTok`;
+    } else if (paramsWiki == 'TS' || paramsWiki == 'Typescript' || paramsWiki == 'typescript' || paramsWiki == 'TypeScript') {
+        titleRead.innerHTML = wikisTitle[18];
+        read_1.innerHTML = `${wikisText_1[18]}`
+        read_2.innerHTML = `${wikisText_1[18.1]}`;
+    } else if (paramsWiki == 'TS' || paramsWiki == 'Minecraft' || paramsWiki == 'MineCraft' || paramsWiki == 'minecraft') {
+        titleRead.innerHTML = wikisTitle[19];
+        read_1.innerHTML = `${wikisText_1[19]}`
+        read_2.innerHTML = `${wikisText_1[19.1]}`;
+    } else if (paramsWiki == 'TS' || paramsWiki == 'Fortnite' || paramsWiki == 'fortnite') {
+        titleRead.innerHTML = wikisTitle[20];
+        read_1.innerHTML = `${wikisText_1[20]}`
+        read_2.innerHTML = `${wikisText_1[20.1]}`;
+    } else if (paramsWiki == 'TS' || paramsWiki == 'Apex' || paramsWiki == 'ApexLegends' || paramsWiki == 'apex' || paramsWiki == 'apexlegends') {
+        titleRead.innerHTML = wikisTitle[21];
+        read_1.innerHTML = `${wikisText_1[21]}`
+        read_2.innerHTML = `${wikisText_1[21.1]}`;
+    } else if (paramsWiki == 'RocketLeague' || paramsWiki == 'RL' || paramsWiki == 'rl' || paramsWiki == 'rocketleague') {
+        titleRead.innerHTML = wikisTitle[22];
+        read_1.innerHTML = `${wikisText_1[22]}`
+        read_2.innerHTML = `${wikisText_1[22.1]}`;
     } else {
         titleRead.innerHTML = 'ERROR 404';
         read_1.innerHTML = "This article was not found";

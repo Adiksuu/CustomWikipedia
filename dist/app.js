@@ -92,6 +92,16 @@ function showCategories_5() {
         categoriesArrow_5.classList.replace("fa-chevron-right", "fa-chevron-down");
     }
 }
+function showCategories_6() {
+    if (categoriesArrow_6.classList.contains("fa-chevron-down")) {
+        categories_6.classList.add("show");
+        categoriesArrow_6.classList.replace("fa-chevron-down", "fa-chevron-right");
+    }
+    else if (categoriesArrow_6.classList.contains("fa-chevron-right")) {
+        categories_6.classList.remove("show");
+        categoriesArrow_6.classList.replace("fa-chevron-right", "fa-chevron-down");
+    }
+}
 function toggleMenu() {
     leftside.classList.toggle("show");
 }
@@ -202,6 +212,31 @@ window.setInterval(() => {
         read_1.innerHTML = `${wikisText_1[17]}`;
         read_2.innerHTML = `${wikisText_1[17.1]} <br><br><br><br><br><br><br><br><br> YouTube Shorts > TikTok`;
     }
+    else if (paramsWiki == 'TS' || paramsWiki == 'Typescript' || paramsWiki == 'typescript' || paramsWiki == 'TypeScript') {
+        titleRead.innerHTML = wikisTitle[18];
+        read_1.innerHTML = `${wikisText_1[18]}`;
+        read_2.innerHTML = `${wikisText_1[18.1]}`;
+    }
+    else if (paramsWiki == 'TS' || paramsWiki == 'Minecraft' || paramsWiki == 'MineCraft' || paramsWiki == 'minecraft') {
+        titleRead.innerHTML = wikisTitle[19];
+        read_1.innerHTML = `${wikisText_1[19]}`;
+        read_2.innerHTML = `${wikisText_1[19.1]}`;
+    }
+    else if (paramsWiki == 'TS' || paramsWiki == 'Fortnite' || paramsWiki == 'fortnite') {
+        titleRead.innerHTML = wikisTitle[20];
+        read_1.innerHTML = `${wikisText_1[20]}`;
+        read_2.innerHTML = `${wikisText_1[20.1]}`;
+    }
+    else if (paramsWiki == 'TS' || paramsWiki == 'Apex' || paramsWiki == 'ApexLegends' || paramsWiki == 'apex' || paramsWiki == 'apexlegends') {
+        titleRead.innerHTML = wikisTitle[21];
+        read_1.innerHTML = `${wikisText_1[21]}`;
+        read_2.innerHTML = `${wikisText_1[21.1]}`;
+    }
+    else if (paramsWiki == 'RocketLeague' || paramsWiki == 'RL' || paramsWiki == 'rl' || paramsWiki == 'rocketleague') {
+        titleRead.innerHTML = wikisTitle[22];
+        read_1.innerHTML = `${wikisText_1[22]}`;
+        read_2.innerHTML = `${wikisText_1[22.1]}`;
+    }
     else {
         titleRead.innerHTML = 'ERROR 404';
         read_1.innerHTML = "This article was not found";
@@ -228,11 +263,13 @@ const categories_2 = document.querySelector(".categories_2");
 const categories_3 = document.querySelector(".categories_3");
 const categories_4 = document.querySelector(".categories_4");
 const categories_5 = document.querySelector(".categories_5");
+const categories_6 = document.querySelector(".categories_6");
 const categoriesArrow_1 = document.querySelector("#categoriesArrow_1");
 const categoriesArrow_2 = document.querySelector("#categoriesArrow_2");
 const categoriesArrow_3 = document.querySelector("#categoriesArrow_3");
 const categoriesArrow_4 = document.querySelector("#categoriesArrow_4");
 const categoriesArrow_5 = document.querySelector("#categoriesArrow_5");
+const categoriesArrow_6 = document.querySelector("#categoriesArrow_6");
 const contentSearched = document.querySelector("#contentSearched");
 const contentHome = document.querySelector("#contentHome");
 let wikisTitle = {
@@ -244,7 +281,7 @@ let wikisTitle = {
     6: "WorldCup 2022",
     7: "HTML",
     8: "CSS",
-    9: "Javascript",
+    9: "JavaScript",
     10: "Python",
     11: "Youtube",
     12: "Facebook",
@@ -253,6 +290,11 @@ let wikisTitle = {
     15: "Snapchat",
     16: "Discord",
     17: "TikTok",
+    18: "TypeScript",
+    19: "Minecraft",
+    20: "Fortnite",
+    21: "Apex Legends",
+    22: "Rocket League",
 };
 let wikisText_1 = {
     1: `A author of this custom wikipedia redesign is`,
@@ -291,5 +333,15 @@ let wikisText_1 = {
     16.1: `Discord is a cross-platform communication platform that was designed specifically for online communities and gamers. It was created in 2015 by Jason Citron and Stan Vishnevskiy and has since grown to become a popular choice for groups and communities to communicate and collaborate online. One of the key features of Discord is its voice chat functionality, which allows users to talk to one another in real-time. This can be particularly useful for gaming communities, as it allows players to communicate and coordinate while they play. Discord also includes text chat, which can be used for more general conversation or for sharing links, images, and other media. In addition to voice and text chat, Discord also offers screen sharing and video calling, which can be useful for groups that need to work together remotely or for online tutoring or other educational purposes. Discord also includes a range of customization options, such as the ability to create and join different "servers" or communities within the platform, as well as the ability to create and join channels within those servers. One of the strengths of Discord is its versatility and flexibility. It can be used by a wide range of communities, from gaming and entertainment to education and business. It is also available on a variety of platforms, including Windows, macOS, Linux, iOS, and Android, which makes it easy for users to access and use the platform from their devices. Overall, Discord is a popular and feature-rich communication platform that is widely used by online communities and gamers for voice and text chat, as well as screen sharing and video calling. Its customization options and cross-platform availability make it a versatile and convenient tool for groups to communicate and collaborate online.`,
     17: "TikTok is a social media platform that allows users to create and share short videos, usually set to music. The app, which was developed by Chinese tech company ByteDance, has become particularly popular among younger users and has been used to create a wide range of content, including lip-sync videos, comedy sketches, and educational content. TikTok has gained a significant following and has been downloaded more than 2 billion times worldwide. It has also faced controversy, with the US government considering banning the app due to national security concerns.",
     17.1: "TikTok is a social media platform that allows users to create and share short videos, typically set to music, with a variety of special effects and filters. The app has a user-friendly interface and features a range of tools and features that make it easy for users to create and edit their videos. In addition to creating their own content, users can also browse and discover content created by other users and engage with them through comments, likes, and other interactions. TikTok has become particularly popular among younger users and has been used to create a wide range of content, including lip-sync videos, comedy sketches, and educational content. The app has also been used to launch the careers of a number of social media influencers and has helped popularize a number of internet trends and memes. TikTok has gained a significant following and has been downloaded more than 2 billion times worldwide. It has also faced controversy, with the US government considering banning the app due to national security concerns. The company has denied these allegations and has taken steps to address concerns about user data privacy and security. Despite these controversies, TikTok remains a popular and influential social media platform, particularly among younger users.",
+    18: `TypeScript is a programming language that is a strict syntactical superset of JavaScript, meaning that it adds additional features to the JavaScript language. TypeScript is designed to be used in conjunction with JavaScript, and it can be compiled into plain JavaScript that can be run in any modern browser or in any JavaScript runtime. One of the main benefits of TypeScript is that it adds optional static typing to JavaScript. This means that you can specify the type of a variable when it is declared, and the TypeScript compiler will check your code to ensure that you are using the variable consistently with its declared type. This can help catch bugs early on in the development process and make your code more reliable and easier to maintain. TypeScript is often used in large-scale projects, where the added type checking and other features of TypeScript can help improve the reliability and maintainability of the codebase. It is also commonly used with frameworks such as Angular and React, which were built with TypeScript and can take advantage of its features.`,
+    18.1: `TypeScript was developed and is maintained by Microsoft. It was first released in 2012, and the latest stable version is 4.3.5, released in December 2021. In addition to adding static typing to JavaScript, TypeScript also includes other features that are not part of the JavaScript language, such as classes, interfaces, and decorators. This allows developers to write code that is easier to understand and maintain, and that is more similar to code written in other object-oriented languages such as Java or C#. TypeScript is a compiled language, which means that it must be transpiled (converted) into JavaScript before it can be run in a browser or other JavaScript runtime. The TypeScript compiler can catch errors and issues in your code before it is run, which can help improve the reliability of your code. TypeScript has strong support from the developer community and is widely used in the industry. It is often used in large-scale projects, as the static typing and other features of TypeScript can help improve the maintainability and scalability of the codebase. It is also commonly used with popular JavaScript frameworks such as Angular, React, and Vue.js. TypeScript has excellent documentation and a strong ecosystem of tools and libraries, making it easy for developers to get started with the language and build powerful applications. It is also constantly being updated and improved, with new versions released regularly to add new features and address any issues.`,
+    19: "Minecraft is a popular sandbox video game that was created by Markus Persson and released by Mojang in 2011. The game allows players to build and explore virtual worlds made up of blocks, create and gather resources, craft a variety of items, and interact with non-player characters (NPCs). There are several different gameplay modes available in Minecraft, including survival mode, creative mode, and adventure mode. In survival mode, players must gather resources and craft items to survive against various hazards, such as mobs and environmental dangers. Creative mode allows players to build and create without the constraints of survival, while adventure mode allows players to experience custom-made maps and challenges created by other players. Minecraft has a large and active community of players, and there are many mods, texture packs, and other user-generated content available for the game.",
+    19.1: `Minecraft is a sandbox video game that has become incredibly popular since its release in 2011. The game is available on a wide variety of platforms, including PC, Mac, Linux, Xbox, PlayStation, and Nintendo Switch. In Minecraft, players can explore a vast, procedurally-generated world made up of blocks. This world is called the "overworld," and it is filled with various biomes, such as forests, deserts, tundras, and more. Players can gather resources, craft items, and build structures in the overworld, and they can also explore underground caves and abandoned mines. One of the main gameplay elements in Minecraft is crafting. Players can gather resources such as wood, stone, and iron, and use these resources to craft a wide variety of items, including tools, weapons, and armor. Players can also create and customize their own skins, which allow them to change the appearance of their character in the game. There are several different gameplay modes available in Minecraft, including survival mode, creative mode, and adventure mode. In survival mode, players must gather resources and craft items to survive against various hazards, such as mobs (hostile creatures) and environmental dangers, such as hunger and drowning. Creative mode allows players to build and create without the constraints of survival, while adventure mode allows players to experience custom-made maps and challenges created by other players. Minecraft has a large and active community of players, and there are many mods, texture packs, and other user-generated content available for the game. Players can also participate in multiplayer servers, where they can play with or against other players from around the world. Overall, Minecraft is a sandbox game that offers endless creative possibilities and endless hours of entertainment for players of all ages.`,
+    20: "Fortnite is a popular battle royale game developed and published by Epic Games. In the game, players are dropped onto an island with 99 other players and must gather resources, build structures, and fight to be the last person or team standing. The island is constantly shrinking due to an incoming storm, so players must stay within the safe zone to avoid taking damage. Fortnite has two main gameplay modes: Fortnite: Save the World and Fortnite Battle Royale. Fortnite: Save the World is a cooperative survival game in which players work together to fight off waves of enemies and build structures to protect themselves. Fortnite Battle Royale, on the other hand, is a competitive multiplayer game in which players fight to be the last person or team standing. Fortnite has a large and active player base, and the game is known for its vibrant and colorful graphics, as well as its regular updates and events. The game is available on a wide variety of platforms, including PC, Mac, Xbox, PlayStation, Nintendo Switch, and mobile devices.",
+    20.1: `Fortnite is known for its vibrant and colorful graphics, as well as its regular updates and events. The game has a large and active player base, and it has become popular in the streaming and esports communities. In addition to the main battle royale mode, Fortnite also features a variety of limited-time events, such as concerts and in-game tournaments. Overall, Fortnite is a fast-paced and action-packed battle royale game that is enjoyed by players of all ages.`,
+    21: `Apex Legends is a free-to-play battle royale game developed by Respawn Entertainment and published by Electronic Arts. The game was released in 2019 and has since gained a large and active player base. In Apex Legends, players are dropped onto an island with 19 other players and must gather resources, find weapons and other items, and fight to be the last team standing. The game features a cast of unique and diverse characters, each with their own abilities and playstyle. Players can choose to play as one of these characters, known as "Legends," and can also form teams with other players. Apex Legends is known for its fast-paced gameplay and smooth controls, as well as its in-depth character customization and progression systems. The game also features a variety of weapons and attachments, as well as a ping system that allows players to communicate without the use of a microphone.`,
+    21.1: `Apex Legends is available on PC, Xbox, and PlayStation, and it is free-to-play with optional in-game purchases. The game has regular updates and events, and it has become popular in the streaming and esports communities. Overall, Apex Legends is a fun and exciting battle royale game that offers a unique twist on the genre with its character-based gameplay and diverse cast of Legends.`,
+    22: `Rocket League is a popular sports-action game developed and published by Psyonix. In the game, players control vehicles that are equipped with boosters and try to score goals by hitting a giant ball into the opposing team's net. The game combines elements of soccer and racing, and it is known for its fast-paced gameplay and high-flying action. Rocket League features several different game modes, including standard matches, ranked matches, and special events. In standard matches, players can choose to play in 1v1, 2v2, 3v3, or 4v4 configurations. Ranked matches allow players to compete in a more competitive setting and earn ranks based on their skill level. Special events are limited-time modes that feature unique gameplay mechanics or objectives. Rocket League has a large and active player base, and it is available on a wide variety of platforms, including PC, Mac, Xbox, PlayStation, Nintendo Switch, and mobile devices.`,
+    22.1: `The game has a robust customization system that allows players to customize their vehicles with a variety of decals, wheels, and other cosmetics. Rocket League is known for its competitive esports scene, and it has been featured in several major tournaments and leagues. The game has also received several updates and expansions since its release, adding new features and content to keep players engaged. Overall, Rocket League is a fun and exciting sports-action game that combines elements of soccer and racing in a unique and enjoyable way.`,
 };
 //# sourceMappingURL=app.js.map

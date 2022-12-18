@@ -43,3 +43,12 @@ function showCategories_5() {
 		categoriesArrow_5.classList.replace("fa-chevron-right", "fa-chevron-down");
 	}
 }
+function showCategories_6() {
+	if (categoriesArrow_6.classList.contains("fa-chevron-down")) {
+		categories_6.classList.add("show");
+		categoriesArrow_6.classList.replace("fa-chevron-down", "fa-chevron-right");
+	} else if (categoriesArrow_6.classList.contains("fa-chevron-right")) {
+		categories_6.classList.remove("show");
+		categoriesArrow_6.classList.replace("fa-chevron-right", "fa-chevron-down");
+	}
+}

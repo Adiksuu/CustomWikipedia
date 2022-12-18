@@ -153,12 +153,12 @@ i#menu_open {
     left: 8px;
     display: none;
 }
-.categories_2, .categories_3, .categories_4, .categories_5 {
+.categories_2, .categories_3, .categories_4, .categories_5, .categories_6 {
     position: relative;
     left: 8px;
     display: none;
 }
-.leftside .pages .categories.show, .categories_2.show, .categories_3.show, .categories_4.show, .categories_5.show {
+.leftside .pages .categories.show, .categories_2.show, .categories_3.show, .categories_4.show, .categories_5.show, .categories_6.show {
     display: block;
 }
 
@@ -202,6 +202,11 @@ i#menu_open {
 }
 .wikipedia_box#box_2 {
     background: url(../images/wall_1.png);
+    background-position: center;
+    background-size: cover;
+}
+.wikipedia_box#box_3 {
+    background: url(../images/wall_3.png);
     background-position: center;
     background-size: cover;
 }
