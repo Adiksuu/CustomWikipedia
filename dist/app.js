@@ -2,13 +2,18 @@ let params = new URLSearchParams(window.location.search);
 let paramsWiki;
 window.setInterval(() => {
     paramsWiki = params.get("wiki");
-    if (myElement.classList.contains("dark")) {
-        toggler.classList.replace("fa-moon", "fa-sun");
-    }
-    else {
-        toggler.classList.replace("fa-sun", "fa-moon");
-    }
 }, 10);
+function save() {
+    let Save = {
+        toggled: toggled
+    };
+    localStorage.setItem("Saved", JSON.stringify(Save));
+}
+function load() {
+    var SaveGame = JSON.parse(localStorage.getItem("Saved"));
+    if (typeof SaveGame.toggled !== "undefined")
+        toggled = SaveGame.toggled;
+}
 let setParams;
 window.setTimeout(() => {
     searchArticle.value = paramsWiki;
@@ -90,9 +95,26 @@ function showCategories_5() {
 function toggleMenu() {
     leftside.classList.toggle("show");
 }
+let toggled = false;
 function toggleMode() {
-    myElement.classList.toggle("dark");
+    if (toggled == false) {
+        toggled = true;
+    }
+    else {
+        toggled = false;
+    }
+    save();
 }
+window.setInterval(() => {
+    if (toggled == false) {
+        toggler.classList.replace("fa-sun", "fa-moon");
+        myElement.classList.remove('dark');
+    }
+    else {
+        toggler.classList.replace("fa-moon", "fa-sun");
+        myElement.classList.add("dark");
+    }
+}, 10);
 window.setInterval(() => {
     setTitle();
     if (paramsWiki == 'wikipedia' || paramsWiki == 'wiki' || paramsWiki == 'Wikipedia' || paramsWiki == 'Wiki') {
